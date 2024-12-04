@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/web-risk": "^4.3.0",
     "axios": "^1.7.8",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "child_process": "^1.0.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -28,6 +30,8 @@
     "nodemon": "^3.1.0",
     "path": "^0.12.7",
     "react-circular-progressbar": "^2.1.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "ssl-checker": "^2.0.10",
+    "whois-json": "^2.0.4"
   }
 }
