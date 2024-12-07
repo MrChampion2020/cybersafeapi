@@ -25,6 +25,19 @@ export const create = async (req, res, next) => {
     next(error);
   }
 };
+// Add this new function to post.controller.js
+
+export const getPost = async (req, res, next) => {
+  try {
+    const post = await Post.findOne({ slug: req.params.slug });
+    if (!post) {
+      return next(errorHandler(404, 'Post not found'));
+    }
+    res.status(200).json(post);
+  } catch (error) {
+    next(error);
+  }
+};
 
 export const getposts = async (req, res, next) => {
   try {
@@ -70,6 +83,8 @@ export const getposts = async (req, res, next) => {
     next(error);
   }
 };
+
+
 
 export const deletepost = async (req, res, next) => {
   if (!req.user.isAdmin || req.user.id !== req.params.userId) {
